@@ -1,54 +1,70 @@
 # Impact India — Civic Issue Reporting Prototype
 
-Built for Smart India Hackathon (TTS25-08 — Government of Jharkhand, Clean & Green Technology theme).
+Impact India is a civic issue-reporting platform prototype developed for **Smart India Hackathon (TTS25-08)** under the Government of Jharkhand's Clean and Green Technology theme.
 
-A multi-role civic reporting platform prototype: Citizen, Volunteer, Authority, and NGO views, with AI-simulated
-issue classification, severity/impact scoring, duplicate clustering, a priority queue, and community action tracking.
+The prototype presents role-based experiences for citizens, volunteers, authorities, and NGOs to support civic issue reporting and community action.
 
-> This is a frontend prototype. AI classification, severity estimation, and duplicate detection are simulated with
-> rule-based logic, structured to be swapped for a real model + backend later.
+## Problem space
 
-## Push this to GitHub
+Civic issues can be difficult to report, prioritize, track, and coordinate across the people and organizations involved. This prototype explores a shared workflow for organizing reports and making their status and priority easier to understand.
 
-From this folder:
+## Prototype capabilities
 
-```bash
-git init
-git add .
-git commit -m "Initial commit: Impact India prototype"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
+- Separate views for citizens, volunteers, authorities, and NGOs.
+- Issue classification using simulated, rule-based logic.
+- Severity and impact scoring using simulated logic.
+- Duplicate-issue clustering using simulated logic.
+- A priority queue for organizing reported issues.
+- Community action tracking.
 
-## Get a live link (GitHub Pages)
+## Important implementation note
 
-This repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds and deploys automatically
-on every push to `main`.
+**This repository is a frontend prototype.** The README and project implementation describe AI classification, severity estimation, and duplicate detection as simulated/rule-based functionality. These should not be represented as a deployed AI model or production backend.
 
-One-time setup after your first push:
-1. Go to your repo on GitHub → **Settings → Pages**.
-2. Under "Build and deployment", set **Source** to **GitHub Actions**.
-3. Push again (or re-run the workflow from the **Actions** tab) if it doesn't trigger automatically.
+## Technology
 
-Your live URL will be:
-```
-https://<your-username>.github.io/<your-repo>/
-```
+The package manifest identifies:
 
-That link is what you should share — it opens the actual running app instead of raw code, the same way your
-IKIP project is hosted.
+- React
+- Vite
+- Recharts
+- Lucide React
+- Tailwind CSS tooling
 
-## Local development
+## Getting started
 
+### Prerequisites
+- Node.js
+- npm
+
+### Install dependencies
 ```bash
 npm install
+```
+
+### Run locally
+```bash
 npm run dev
 ```
 
-## Build locally
-
+### Build
 ```bash
 npm run build
+```
+
+### Preview the build
+```bash
 npm run preview
 ```
+
+## Deployment
+
+The repository includes a GitHub Actions deployment workflow according to the existing project documentation. Configure the repository's Pages settings to use GitHub Actions before relying on a public deployment URL. Verify the workflow run and published URL in GitHub before sharing them.
+
+## Future improvements
+
+- Connect reporting and status workflows to a persistent backend.
+- Replace simulated classification and scoring with validated services or models.
+- Add tests for issue submission, prioritization, and role-based flows.
+- Include verified screenshots and a deployment link.
+- Document the data model, limitations, and privacy considerations.
